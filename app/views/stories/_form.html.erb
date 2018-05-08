@@ -1,0 +1,13 @@
+<%= bootstrap_form_for @story, html: { multipart: true } do |f| %>
+	
+	<%= f.text_field :title %>
+
+	<%= f.text_field :author %>
+
+	<%= f.text_field :genre %>
+
+	<%= f.text_area :text %>
+
+	<%= f.submit %>
+
+<% end %>

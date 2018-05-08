@@ -1,0 +1,43 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<h1 class="center"><br />All Stories</h1><br />
+
+			<br />
+				
+			<div class="center"><%= link_to('Add New Story', new_story_path, class: 'btn btn-sm btn-primary') %></div>
+
+			<br />
+
+			<hr />
+
+			<% if @stories.count == 0 %>
+
+				<p class="center">You do not have any stories right now.</p>
+
+			<% else %>
+
+				<% @stories.each do |story| %>
+
+					<p class="center"><b>Title:</b> <%= story.title %></p>
+
+					<p class="center"><b>Author:</b> <%= story.author %></p>
+
+					<p class="center"><b>Genre:</b> <%= story.genre %></p>
+
+					<div class="center"><%= link_to('View Story', story, class: 'btn btn-sm btn-success') %></div>
+
+					<hr />
+
+				<% end %>
+
+			<% end %>
+
+		</div>
+
+	</div>
+
+</div>

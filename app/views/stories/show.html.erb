@@ -1,0 +1,31 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+
+			<h1 class="center"><br /><%= @story.title %></h1><br /><hr /><br />
+
+
+			<p class="center"><b>Author:</b> <%= @story.author %></p>
+
+			<p class="center"><b>Genre:</b> <%= @story.genre %></p>
+
+			<p class="center"><b>Story:</b> <br /><br /><%= @story.text %></p>
+
+			<br />
+			<div class="center">
+				<%= link_to('Edit Story', edit_story_path(@story), class: 'btn btn-sm btn-primary') %>
+
+				<%= link_to('Delete Story', story_path(@story), method: :delete, data: { confirm: 'Are you sure you want to delete this entire story?' }, class: 'btn btn-sm btn-danger') %>
+			</div><br /><br />
+
+			<div class="center"><%= link_to('View All Stories', stories_path, class: 'btn btn-sm btn-success') %></div><br />
+
+			<div class="center"><%= link_to('Home', root_path, class: 'btn btn-sm btn-success') %></div>
+
+		</div>
+
+	</div>
+
+</div>
